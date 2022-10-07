@@ -1,11 +1,18 @@
 import { createContext } from "react";
-import { useState } from "react";
+import { useState, useEffect} from "react";
+import { getProducts } from "../../services/ApiShopper.jsx";
 
 export const GlobalContext = createContext({})
 
 export const GlobalProvider = ({children}) => {
-    const [nome, setNome] = useState('Maycon :)');
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const teste = getProducts()
+        teste.then((response) => setProducts(response.result))
+    },[])
+
     return (
-        <GlobalContext.Provider value={{nome, setNome}}>{children}</GlobalContext.Provider>
+        <GlobalContext.Provider value={{products}}>{children}</GlobalContext.Provider>
     )
 } 
