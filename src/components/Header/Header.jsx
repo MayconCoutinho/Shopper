@@ -2,24 +2,25 @@ import React from 'react';
 import { HeaderStyled} from './styled.jsx';
 import { useState } from 'react';
 import icon from '../../assets/shopper-icon.png'
+import { HeaderButtonCart } from '../HeaderButtonCart/HeaderButtonCart.jsx';
 
 export const Header = () => {
 
-const [menuMobile, setMenuMobileTrue] = useState(false)
+const [menuCart, setMenuCartTrue] = useState(false)
 
-const MenuMobileFuncao = () => {
+const MenuCart = () => {
 
-    if(menuMobile === false){
-        setMenuMobileTrue(true)
+    if(menuCart === false){
+        setMenuCartTrue(true)
     }
     else{
-        setMenuMobileTrue(false)
+        setMenuCartTrue(false)
     }
 }
     return (
         <HeaderStyled>
             <img src={icon} height={100}/>
-            <button> Teste </button>
+            <HeaderButtonCart/> 
         </HeaderStyled>
     )
 }
