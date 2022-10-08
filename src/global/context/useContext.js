@@ -6,6 +6,8 @@ export const GlobalContext = createContext({})
 
 export const GlobalProvider = ({children}) => {
     const [products, setProducts] = useState([]);
+    const [cartSum, setCartSum] = useState(0);
+
 
     useEffect(() => {
         const teste = getProducts()
@@ -13,6 +15,6 @@ export const GlobalProvider = ({children}) => {
     },[])
 
     return (
-        <GlobalContext.Provider value={{products}}>{children}</GlobalContext.Provider>
+        <GlobalContext.Provider value={{products, cartSum, setCartSum}}>{children}</GlobalContext.Provider>
     )
 } 
