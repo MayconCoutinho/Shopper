@@ -1,11 +1,15 @@
-export const goToHomePage = (navigate) => {
+export const goToLogin = (navigate) => {
     navigate("/")
   }
 export const goToVoltar = (navigate) => {
     navigate(-1)
   }
-export const goToTeste = (navigate) => {
+export const goToTestePage = (navigate) => {
     navigate("/TestePage")
   }
+export const goToHomePage = (navigate) => {
+    navigate("/home")
+  }
+
 
 

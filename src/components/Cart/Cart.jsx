@@ -8,15 +8,15 @@ import { useForm } from '../../hooks/useForm.js';
 export const Cart = () => {
     const { products } = useContext(GlobalContext)
     const { cartSum, setCartSum } = useContext(GlobalContext)
-
     const {formValues, onChange, cleanFields, addChange, OneItemAdd} = useForm([{
+        id:"",
+        quantity:""
+    }])
 
-}])
-
-console.log(formValues)
+console.log("valor do formularios",formValues)
 
     const SubmitForm = (event) => {
-        event.preventDefault() 
+        // event.preventDefault() 
         console.log(formValues)
         cleanFields()
         alert("Formulario Enviado")
@@ -34,7 +34,7 @@ console.log(formValues)
                         (<form onSubmit={SubmitForm}>
                             <input
                                 type={"number"}
-                                name={"quantity"}
+                                name={item.id}
                                 onChange={onChange}
                                 required
                                 min="0"

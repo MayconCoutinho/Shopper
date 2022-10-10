@@ -1,8 +1,9 @@
 import React from 'react';
-import { HeaderStyled} from './styled.jsx';
+import { HeaderCss, MenuCartCss} from './styled.jsx';
 import { useState } from 'react';
 import icon from '../../assets/shopper-icon.png'
 import { HeaderButtonCart } from '../HeaderButtonCart/HeaderButtonCart.jsx';
+
 
 export const Header = () => {
 
@@ -18,9 +19,10 @@ const MenuCart = () => {
     }
 }
     return (
-        <HeaderStyled>
+        <HeaderCss>
             <img src={icon} height={100}/>
             <HeaderButtonCart/> 
-        </HeaderStyled>
+            {/* <MenuCartCss/> */}
+        </HeaderCss>
     )
 }
