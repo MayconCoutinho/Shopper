@@ -23,7 +23,7 @@ export const useForm = (initialState) => {
       
       // const result = teste.map((item) => console.log(item)) 
 
-      return false
+      return true
   }
 
   useEffect(() => {

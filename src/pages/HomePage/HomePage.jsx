@@ -1,15 +1,29 @@
-import { useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import { Cart } from "../../components/Cart/Cart";
 import { Slogan } from "../../components/Slogan/Slogan";
+import { useState } from "react";
+import { Loading } from "../../components/Loading/Loading";
 
 const HomePage = () => {
-  const navigate = useNavigate();
+    const [loading, setLoading ] = useState(true)
+
+    setTimeout(() => {
+      setLoading(false)
+    }, "3000")
+  
     return (
     <> 
-      <Header/>
-      <Slogan/>
+    {
+      loading === true ? 
+      <Loading/> : 
+      (
+      <>
+      <Header/> 
+      <Slogan/> 
       <Cart/>
+      </>
+      )
+    }
     </>
     )
 }
