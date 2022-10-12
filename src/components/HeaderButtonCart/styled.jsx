@@ -6,24 +6,19 @@ export const HeaderButtonCartCss = styled.div`
     justify-content: center;
     position: relative;
     box-sizing: border-box;
-    outline: 0px;
-    border: 0px;
     margin-right: 80px;
     cursor: pointer;
     user-select: none;
     vertical-align: middle;
-    appearance: none;
     text-decoration: none;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.02857em;
-    text-transform: uppercase;
     min-width: 64px;
-    padding: 6px 16px;
+    padding: 6px 30px 6px 10px;
     border-radius: 4px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     color: rgb(255, 255, 255);
     background-color: rgb(45, 167, 122);
     box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
@@ -36,6 +31,13 @@ export const QuantityCartCss = styled.div`
     width: 30px;
     text-align: center;
     margin-right: 10px;
+`
+export const CartTotalPriceCss = styled.div`
+    font-size: 16px;
+    color: #fff;
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 30px;
 `
 export const MenuCartCss = styled.div`
     display:${(props) => props.variant === true ?  "flex" : "none"};
