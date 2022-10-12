@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderButtonCartCss,QuantityCartCss,MenuCartCss,ArrowCss, FinaliteBuy} from './styled.jsx';
+import { HeaderButtonCartCss,QuantityCartCss,MenuCartCss,ArrowCss, FinaliteBuy,CartTotalPriceCss} from './styled.jsx';
 import { useState } from 'react';
 import { useContext } from 'react'
 import {GlobalContext} from "../../global/context/useContext.js"
@@ -8,8 +8,8 @@ import { TiShoppingCart } from "react-icons/ti";
 export const HeaderButtonCart = () => {
 
 const [menuCart, setMenuCartTrue] = useState(false)
-const { cartSum } = useContext(GlobalContext)
-
+const { cartItemSum } = useContext(GlobalContext)
+const totalPrice = 100
 
 const MenuCart = () => {
     if(menuCart === false){
@@ -21,7 +21,10 @@ const MenuCart = () => {
 }
     return (
         <>
-            <HeaderButtonCartCss onClick={() => MenuCart()} > <QuantityCartCss> {cartSum} </QuantityCartCss><TiShoppingCart/> </HeaderButtonCartCss>
+            <HeaderButtonCartCss onClick={() => MenuCart()} > 
+                <QuantityCartCss> {cartItemSum} </QuantityCartCss><TiShoppingCart/> 
+                <CartTotalPriceCss> {totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </CartTotalPriceCss>
+            </HeaderButtonCartCss>
             <MenuCartCss variant={ menuCart == true}> 
             <ArrowCss variant={ menuCart == true}/> 
             <h1> Teste </h1>

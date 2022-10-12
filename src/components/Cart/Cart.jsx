@@ -4,20 +4,29 @@ import { useContext } from 'react'
 import {GlobalContext} from "../../global/context/useContext.js"
 import { TiPlus } from "react-icons/ti";
 import { useForm } from '../../hooks/useForm.js';
+import { postUserProducts } from '../../services/ApiShopper.jsx';
 
 export const Cart = () => {
     const { products } = useContext(GlobalContext)
-    const { cartSum, setCartSum } = useContext(GlobalContext)
-    const {formValues, onChange, cleanFields, addChange, OneItemAdd} = useForm([{
+    const { cartItemSum, setCartItemSum, user, setTimesAddedProducts, timesAddedProducts} = useContext(GlobalContext)
+    const {formValues, onChange, cleanFields} = useForm([{
         id:"",
         quantity:""
     }])
+    const OneItemAdd = (id) => {
 
-console.log("valor do formularios",formValues)
-
+        // const teste = formValues.initialState
+        
+        // const result = teste.map((item) => console.log(item)) 
+  
+        return true
+    }
+    const AddProductCart = (idProduct) => {
+        postUserProducts(idProduct,user)
+        setTimesAddedProducts(timesAddedProducts + 1)
+    }
     const SubmitForm = (event) => {
         // event.preventDefault() 
-        console.log(formValues)
         cleanFields()
         alert("Formulario Enviado")
     }
@@ -29,7 +38,7 @@ console.log("valor do formularios",formValues)
                     <CartCss key={item.id}> 
                         <NameCss> {item.name} </NameCss> 
                         <PriceCss> {item.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </PriceCss>             
-                        { OneItemAdd(item.id) ? (<ButtonAddCart onClickCapture={() => addChange(item.id)}><TiPlus/> Adicionar </ButtonAddCart>)
+                        { OneItemAdd(item.id) ? (<ButtonAddCart onClickCapture={() => AddProductCart(item.id)}><TiPlus/> Adicionar </ButtonAddCart>)
                         :
                         (<form onSubmit={SubmitForm}>
                             <input

@@ -6,7 +6,6 @@ const LoginPage = () => {
   const navigate = useNavigate();
     return (
       <BackGroundCSS> 
-        <WelcomeMessageCSS> Seja bem vindo a Shopper </WelcomeMessageCSS> 
         <LoginUser/>
       </BackGroundCSS>
     )
