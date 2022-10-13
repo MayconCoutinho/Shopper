@@ -8,8 +8,7 @@ import { TiShoppingCart } from "react-icons/ti";
 export const HeaderButtonCart = () => {
 
 const [menuCart, setMenuCartTrue] = useState(false)
-const { cartItemSum } = useContext(GlobalContext)
-const totalPrice = 100
+const { cartItemSum, cartPriceSum } = useContext(GlobalContext)
 
 const MenuCart = () => {
     if(menuCart === false){
@@ -23,16 +22,16 @@ const MenuCart = () => {
         <>
             <HeaderButtonCartCss onClick={() => MenuCart()} > 
                 <QuantityCartCss> {cartItemSum} </QuantityCartCss><TiShoppingCart/> 
-                <CartTotalPriceCss> {totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </CartTotalPriceCss>
+                <CartTotalPriceCss> {cartPriceSum && cartPriceSum.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </CartTotalPriceCss>
             </HeaderButtonCartCss>
-            <MenuCartCss variant={ menuCart == true}> 
-            <ArrowCss variant={ menuCart == true}/> 
+            <MenuCartCss variant={ menuCart === true}> 
+            <ArrowCss variant={ menuCart === true}/> 
             <h1> Teste </h1>
             <h1> Teste </h1>
             <h1> Teste </h1>
             <h1> Teste </h1>
             <h1> Teste </h1>
-            <FinaliteBuy variant={ menuCart == true}> FINALIZAR COMPRA </FinaliteBuy> 
+            <FinaliteBuy variant={ menuCart === true}> FINALIZAR COMPRA </FinaliteBuy> 
             </MenuCartCss>
         </>
         )

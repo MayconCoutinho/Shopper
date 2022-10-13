@@ -65,3 +65,25 @@ export const StockCss = styled.div`
     font-size: 20px;
     margin-bottom: 10px;
 `
+export const InputCss = styled.div`
+    input{
+        text-align: center;
+        font-size: 14px;
+        padding: 4px 8px;
+        background-color: hsl(0, 0%, 100%);
+        border-color: #2da77a;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 1px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 38px;
+        outline: 0!important;
+        transition: all 100ms;
+        box-sizing: border-box;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 1000;
+        color: #2da77a;
+    }
+   
+`
