@@ -17,9 +17,9 @@ export const getUser = async (name) => {
         console.log(error.response)
     }
 }
-export const getProductsPrice = async (id) => {
+export const getTotalProductsPrice = async (id) => {
     try{
-        const response = await axios.get(`${BASE_URL}/product/${id}`)
+        const response = await axios.get(`${BASE_URL}/product/total/price/${id}`)
         return response.data
     } catch(error){
         console.log(error.response)
@@ -28,15 +28,15 @@ export const getProductsPrice = async (id) => {
 export const getProductsUserQuantity = async (name) => {
     try{
         const response = await axios.get(`${BASE_URL}/user/products/${name}`)
-        return response.data.length
+        return response.data
     } catch(error){
         console.log(error.response)
     }
 }
-export const getAllProductsUser = async (id) => {
+export const putUpProductQuantity = async (id,quantity) => {
     try{
-        const response = await axios.get(`${BASE_URL}/user/products/user/${id}`)
-        return response.data.length
+        const response = await axios.put(`${BASE_URL}/user/${id}/${quantity}`)
+        return response.data
     } catch(error){
         console.log(error.response)
     }

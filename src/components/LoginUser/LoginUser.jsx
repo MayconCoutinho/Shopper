@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputCSS,ButtonCSS,DateCSS, WelcomeMessageCSS,ImgCSS} from './styled.jsx';
+import { InputCSS,ButtonCSS,DateCSS, WelcomeMessageCSS,ImgCSS, InstructionCSS} from './styled.jsx';
 import { useForm } from "../../hooks/useForm";
 import { useNavigate } from "react-router-dom";
 import { goToHomePage } from '../../routes/coordinator.jsx';
@@ -21,10 +21,11 @@ export const LoginUser = () => {
     const SubmitForm = (event) => {
         event.preventDefault()
         postUser(formValues.name,formValues.delivery_date)
-        AddIdUser()
-        cleanFields()
-        alert("Formulario Enviado")
-        goToHomePage(navigate)
+        setTimeout(() => {
+            AddIdUser()
+            alert("Formulario Enviado")
+            goToHomePage(navigate)
+          }, "100")
     }
     return (
         <> 
@@ -32,6 +33,7 @@ export const LoginUser = () => {
                 <img src='https://programada.shopper.com.br/static/img/apple-icon.png' width={100}></img> 
             </ImgCSS> 
             <WelcomeMessageCSS> Seja bem vindo a Shopper </WelcomeMessageCSS> 
+            <InstructionCSS> Digite o seu nome e data de entrega para logar ou cadastrar.</InstructionCSS> 
             <form onSubmit={SubmitForm}>
                 <InputCSS> 
                     <input
