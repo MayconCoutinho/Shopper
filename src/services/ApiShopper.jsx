@@ -79,5 +79,3 @@ export const postUserProducts = async (idProduct,idUser) => {
         console.log(error.response)
     }
 }
-
-

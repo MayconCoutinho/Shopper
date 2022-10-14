@@ -5,14 +5,13 @@ export const ContainerCss = styled.div`
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
     @media (max-width: 991px) {
     grid-template-columns: 1fr 1fr;
-  }
+   }
 
-  @media (max-width: 768px) {
+    @media (max-width: 768px) {
     grid-template-columns: 1fr;
-  }
+   }
 `
 export const ContainerGridCss = styled.div`
     display: grid;
@@ -63,6 +62,26 @@ export const CartCss = styled.div`
     box-shadow: 0px 1px 8px rgb(0 45 98 / 6%);
     text-align: center;
 `
+export const CartBlockCss = styled.div`
+    display:${(props) => props.variant === true ?  "flex" : "none"};
+    background-color: #2da77ac0;
+    width: 250px;
+    height: 315px;
+    border-radius: 8px;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    p{
+        margin-top: 120px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+    }
+`
 export const NameCss = styled.div`
     margin-top: 20px;
     color: #363636;
@@ -93,11 +112,9 @@ export const ButtonAddCart = styled.div`
     border-radius: 50px;
     border: 2px solid rgb(45, 167, 122);
     width: 120px;
-
     :hover{
         background-color:  rgb(45, 167, 122);
         color: rgb(255, 255, 255);
-
     }
 `
 export const StockCss = styled.div`
@@ -125,5 +142,4 @@ export const InputCss = styled.div`
         font-weight: 1000;
         color: #2da77a;
     }
-   
 `

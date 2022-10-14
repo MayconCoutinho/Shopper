@@ -12,19 +12,17 @@ const HomePage = () => {
     }, "3000")
   
     return (
-    <> 
-    {
-      loading === true ? 
-      <Loading/> : 
-      (
-      <>
-      <Header/> 
-      <Slogan/> 
-      <Cart/>
-      </>
-      )
-    }
-    </>
+            <> 
+                {
+                  loading === true ? 
+                    <Loading/> : 
+                  (<>
+                    <Header/> 
+                    <Slogan/> 
+                    <Cart/>
+                    </>)
+                }
+            </>
     )
 }
 export default HomePage;

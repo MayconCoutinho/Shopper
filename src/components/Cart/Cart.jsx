@@ -1,5 +1,17 @@
 import React from 'react';
-import { CartCss, ContainerCss, NameCss, PriceCss, StockCss,ButtonAddCart,InputCss,ContainerGridCss,ButtonDeleteCSS, ButtonPutCSS } from './styled.jsx';
+import { 
+    CartCss,
+    ContainerCss,
+    NameCss,
+    PriceCss,
+    StockCss,
+    ButtonAddCart,
+    InputCss,
+    ContainerGridCss,
+    ButtonDeleteCSS,
+    ButtonPutCSS,
+    CartBlockCss
+} from './styled.jsx';
 import { useContext } from 'react'
 import {GlobalContext} from "../../global/context/useContext.js"
 import { TiPlus } from "react-icons/ti";
@@ -64,6 +76,9 @@ export const Cart = () => {
             products && products.map((item) => {
                 return(
                     <CartCss key={item.id}> 
+                     <CartBlockCss key={item.id} variant={ item.qty_stock === 0}>
+                        <p> Produto fora de estoque </p>    
+                    </CartBlockCss> 
                         <NameCss> {item.name} </NameCss> 
                         <PriceCss> {item.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </PriceCss>             
                         { OneItemAdd(item.id) === 0 ? (<ButtonAddCart onClickCapture={() => AddProductCart(item.id)}><TiPlus/> Adicionar </ButtonAddCart>)
@@ -87,7 +102,7 @@ export const Cart = () => {
                                     ></input>
                               </InputCss>
                             <ButtonDeleteCSS> 
-                                <button onClick={() => DeleteProduct(item.id)}> <MdRemoveShoppingCart/> </button> 
+                                <button onClick={() => DeleteProduct(item.id)}> <MdRemoveShoppingCart/></button> 
                             </ButtonDeleteCSS>
                         </ContainerGridCss>      
                             </>   

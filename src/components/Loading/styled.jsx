@@ -9,7 +9,6 @@ export const LoadingCSS = styled.div`
     border: 2px solid #2da77a;
     border-radius: 20px;
     overflow: hidden;    
-    
     ::after {
       content: '';
       margin-top: 2px;
@@ -34,7 +33,6 @@ export const LoadingCSS = styled.div`
         transform: translateX(0%);
       }
     }
-      
 `
 export const ContainerCss = styled.div`
     background: #fff;
@@ -48,4 +46,3 @@ export const ContainerCss = styled.div`
     justify-content: center;
     align-items: center;
 `
-

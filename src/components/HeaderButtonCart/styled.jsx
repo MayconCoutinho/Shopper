@@ -22,6 +22,10 @@ export const HeaderButtonCartCss = styled.div`
     color: rgb(255, 255, 255);
     background-color: rgb(45, 167, 122);
     box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+    @media (max-width: 768px) {
+        padding: 6px 80px 6px 10px;
+        margin-right: 20px;
+}
 `
 export const QuantityCartCss = styled.div`
     font-size: 16px;
@@ -38,6 +42,11 @@ export const CartTotalPriceCss = styled.div`
     width: 30px;
     margin-left: 5px;
     margin-right: 30px;
+    @media (max-width: 768px) {
+        width: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+   }
 `
 export const MenuCartCss = styled.div`
     display:${(props) => props.variant === true ?  "flex" : "none"};
@@ -56,6 +65,9 @@ export const MenuCartCss = styled.div`
     border-left: 1px solid rgb(238, 238, 238);
     border-radius: 6px;
     box-shadow: rgb(187 187 187) 3px 8px 22px -3px;
+    @media (max-width: 768px) {
+        width: 350px;
+   }
 `
 export const ArrowCss = styled.div`
     display:${(props) => props.variant === true ?  "flex" : "none"};
@@ -82,15 +94,18 @@ export const FinaliteBuy = styled.div`
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    cursor: pointer;
+    :hover{
+        background: rgb(27, 107, 78);
+    }
 `
 export const ItemCartCSS = styled.div`
     line-height: 18px;
     display: inline-block;
     margin-left: 30px;
-    margin-right: 25px;
+    margin-right: 50px;
     margin-top: 20px;
     cursor: default;
-
     h1{
         display: flex;
         justify-content: space-around;
@@ -113,6 +128,14 @@ export const ItemCartCSS = styled.div`
         font-size: 17px;
         color: rgb(45, 167, 122);
     }
+    @media (max-width: 768px) {
+        width: 250px;
+        input{
+            width: 100px;
+            padding: 4px 0px;
+            min-height: 38px;
+        }
+   }
 `
 export const ScrollCSS = styled.div`
     overflow-y: scroll;
@@ -130,6 +153,5 @@ export const ScrollCSS = styled.div`
 `
 export const EmptyCartCSS = styled.div`
     text-align: center;
-    margin-top: 200px;
-    
+    margin-top: 200px; 
 `
