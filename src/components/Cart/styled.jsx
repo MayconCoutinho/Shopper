@@ -5,6 +5,46 @@ export const ContainerCss = styled.div`
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`
+export const ContainerGridCss = styled.div`
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+`
+export const ButtonDeleteCSS = styled.div`
+    margin-top: 8px;
+    button{
+        color: #8f0000;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        :hover{
+            color: #ff0000;
+        }
+    }
+`
+export const ButtonPutCSS = styled.div`
+    margin-top: 8px;
+    button{
+        color: #008f07;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        :hover{
+            color: #00d80b;
+        }
+    }
 `
 export const CartCss = styled.div`
     display: flex;

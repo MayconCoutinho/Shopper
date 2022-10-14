@@ -17,7 +17,7 @@ export const HeaderButtonCartCss = styled.div`
     line-height: 1.75;
     letter-spacing: 0.02857em;
     min-width: 64px;
-    padding: 6px 30px 6px 10px;
+    padding: 6px 40px 6px 10px;
     border-radius: 4px;
     color: rgb(255, 255, 255);
     background-color: rgb(45, 167, 122);
@@ -83,4 +83,53 @@ export const FinaliteBuy = styled.div`
     align-items: center;
     text-decoration: none;
 `
+export const ItemCartCSS = styled.div`
+    line-height: 18px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 25px;
+    margin-top: 20px;
+    cursor: default;
 
+    h1{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        font-size: 18px;
+        font-weight: 400;    
+        margin-bottom : 10px;
+    }
+    h2{
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 17px;
+        color: rgb(45, 167, 122);
+    }
+    p{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        font-weight: bold;
+        font-size: 17px;
+        color: rgb(45, 167, 122);
+    }
+`
+export const ScrollCSS = styled.div`
+    overflow-y: scroll;
+    position: flex;
+    height: 700px;
+    ::-webkit-scrollbar{
+    width: 15px;
+    border: 1px solid rgb(45, 167, 122);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color:rgb(45, 167, 122) ;
+    border-radius: 5px;
+  }
+`
+export const EmptyCartCSS = styled.div`
+    text-align: center;
+    margin-top: 200px;
+    
+`

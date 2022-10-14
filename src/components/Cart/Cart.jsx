@@ -1,11 +1,11 @@
 import React from 'react';
-import { CartCss, ContainerCss, NameCss, PriceCss, StockCss,ButtonAddCart,InputCss } from './styled.jsx';
+import { CartCss, ContainerCss, NameCss, PriceCss, StockCss,ButtonAddCart,InputCss,ContainerGridCss,ButtonDeleteCSS, ButtonPutCSS } from './styled.jsx';
 import { useContext } from 'react'
 import {GlobalContext} from "../../global/context/useContext.js"
 import { TiPlus } from "react-icons/ti";
+import { MdRemoveShoppingCart, MdAddShoppingCart } from 'react-icons/md';
 import { useForm } from '../../hooks/useForm.js';
-import { postUserProducts, putUpProductQuantity } from '../../services/ApiShopper.jsx';
-
+import { deleteProductsUser, postUserProducts, putUpProductQuantity } from '../../services/ApiShopper.jsx';
 
 export const Cart = () => {
     const { products } = useContext(GlobalContext)
@@ -15,8 +15,22 @@ export const Cart = () => {
         id:"",
         quantity:""
     }])    
-    const putQuantity = (id) => {
+    const PutQuantity = (id, totalQuantity) => {
+
+        if( formValues.quantity <= totalQuantity){
+
         putUpProductQuantity(id,formValues.quantity)
+        setTimeout(() => {
+            alert("Produto mudado com sucesso")
+            setTimesAddedProducts(timesAddedProducts + 1)
+          }, "100")
+        } else {
+            alert("A quantidade de produto é maior do que a de estoque")
+        }
+        
+    }
+    const DeleteProduct = (id) => {
+        deleteProductsUser(id)
         setTimeout(() => {
             setTimesAddedProducts(timesAddedProducts + 1)
           }, "100")
@@ -44,10 +58,6 @@ export const Cart = () => {
             setTimesAddedProducts(timesAddedProducts + 1)
           }, "100")
     }
-    const SubmitForm = (event) => {
-        // event.preventDefault() 
-        alert("Formulario Enviado")
-    }
     return (
         <ContainerCss>            
             {
@@ -60,7 +70,10 @@ export const Cart = () => {
                         :
                         (
                          <>    
-                         <button onClick={() => putQuantity(item.id)}> Confirmar </button>                     
+                        <ContainerGridCss>
+                        <ButtonPutCSS>
+                         <button onClick={() => PutQuantity(item.id, item.qty_stock)}> <MdAddShoppingCart/> </button>  
+                         </ButtonPutCSS>                                       
                             <InputCss> 
                                 <input
                                     type={"number"}
@@ -73,6 +86,10 @@ export const Cart = () => {
                                     value={formValues.name}
                                     ></input>
                               </InputCss>
+                            <ButtonDeleteCSS> 
+                                <button onClick={() => DeleteProduct(item.id)}> <MdRemoveShoppingCart/> </button> 
+                            </ButtonDeleteCSS>
+                        </ContainerGridCss>      
                             </>   
                             )}
                         <StockCss> {item.qty_stock} </StockCss> 

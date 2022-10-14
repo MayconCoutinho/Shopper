@@ -33,9 +33,25 @@ export const getProductsUserQuantity = async (name) => {
         console.log(error.response)
     }
 }
+export const deleteProductsUser = async (id) => {
+    try{
+        const response = await axios.delete(`${BASE_URL}/user/products/${id}`)
+        return response.data
+    } catch(error){
+        console.log(error.response)
+    }
+}
 export const putUpProductQuantity = async (id,quantity) => {
     try{
         const response = await axios.put(`${BASE_URL}/user/${id}/${quantity}`)
+        return response.data
+    } catch(error){
+        console.log(error.response)
+    }
+}
+export const putUpQtyStockQuantity = async (id,quantity) => {
+    try{
+        const response = await axios.put(`${BASE_URL}/products/${id}/${quantity}`)
         return response.data
     } catch(error){
         console.log(error.response)
