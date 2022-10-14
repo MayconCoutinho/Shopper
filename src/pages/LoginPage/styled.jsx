@@ -6,7 +6,4 @@ export const BackGroundCSS = styled.div`
     background-color: #fff;
     align-items: center;
     text-align: center;
-    
 `
-
-

@@ -48,14 +48,11 @@ export const ButtonCSS = styled.div`
     color: rgb(255, 255, 255);
     background-color: rgb(45, 167, 122);
     border-color: rgb(45, 167, 122);
-
     :hover{
         border-color: rgb(6, 70, 46);
         background-color: rgb(33, 148, 106);
-
+        }
     }
-    }
-
 `
 export const DateCSS = styled.div`
     margin-top: 20px;

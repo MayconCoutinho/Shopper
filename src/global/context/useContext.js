@@ -18,13 +18,12 @@ export const GlobalProvider = ({children}) => {
             const result = getTotalProductsPrice(user)
             result.then((response) => {setCartPriceSum(response[0].price_total)})
         }
-  
     },[timesAddedProducts,user])
 
     useEffect(() => {
         const result = getProductsUserQuantity(user)
         result.then((response) => {
-            setCartItemSum(response.length)
+            setCartItemSum(response.map((item) => item.quantity).reduce((current, total) => current + total))
         })
     },[user,timesAddedProducts])
 
@@ -32,6 +31,7 @@ export const GlobalProvider = ({children}) => {
         const result = getProductsUserQuantity(user)
         result.then((response) => {setCartItem(response)})
     },[user,timesAddedProducts])
+    
     useEffect(() => {
         const result = getProducts()
         result.then((response) => {
