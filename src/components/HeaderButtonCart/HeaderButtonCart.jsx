@@ -74,7 +74,7 @@ const MenuCart = () => {
     return (
         <>
             <HeaderButtonCartCss onClick={() => MenuCart()} > 
-                <QuantityCartCss> {cartItemSum} </QuantityCartCss><TiShoppingCart/> 
+                <QuantityCartCss> {cartPriceSum > 0 ? cartItemSum : 0 } </QuantityCartCss><TiShoppingCart/> 
                 <CartTotalPriceCss> {cartPriceSum && cartPriceSum.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) || 0 } </CartTotalPriceCss>
             </HeaderButtonCartCss>
             <MenuCartCss variant={ menuCart === true}> 
