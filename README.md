@@ -10,11 +10,6 @@ https://user-images.githubusercontent.com/60453269/195930225-ee2b8a0b-cbf4-4bd4-
 
 <br/>
 
-## 📲 User demo ➜ [Link Surge](https://maycon-coutinho-front-end-shopper.vercel.app/) -> # OBS -> A api é um pouco lenta, por esta hospedada em um site gratiuto
-
-- Login: Crie um novo ou acesse um seu antigo
-- date: pode ser qualquer data
-
 ## 📷 Imagens Mobile
 
 <div align="center"> 
