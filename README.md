@@ -32,14 +32,13 @@ https://user-images.githubusercontent.com/60453269/195930225-ee2b8a0b-cbf4-4bd4-
 ## ⚛️ Tecnologias utilizadas 
 - React Js
 - Styled Components 
-- Design Systems (Chakra UI)
 - Axios 
 
 ## 🖥️ Libs para instalar e visualizar o projeto 
 - Router➜ npm i react-router-dom
 - Axios ➜ npm i axios
 - Styled Components ➜ npm i styled-components 
-- React Icons (Hide/show eyes) ➜ npm install react-icons --save
+- React Icons ➜ npm install react-icons --save
 
 ## 💻 Desenvolvedores 
 
