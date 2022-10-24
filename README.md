@@ -1,31 +1,54 @@
-# Font-Shopper:
-
 <h1 align="center">
-<img width=200 src="https://user-images.githubusercontent.com/60453269/196004447-1746c4f2-dba8-40fd-8fa5-1f24a3ea3f4a.png">
+<img src="https://user-images.githubusercontent.com/60453269/197553620-fdb2ef65-9b3a-4d4d-af41-9ca3d1b856f8.png">
 </h1>
 
-<br/>
+<h3 align="center">
+  🔊 Ative o Som Para Ter Uma Experiência Mais Agradável 😁  <br/>
+</h3>
 
-https://user-images.githubusercontent.com/60453269/195930225-ee2b8a0b-cbf4-4bd4-9d7b-cb8efdb76ba2.mp4
+<br>
+
+https://user-images.githubusercontent.com/60453269/197554091-d03eaa76-9acd-4b99-b17a-804a2182339f.mp4
+
 
 <br/>
 
 ## 📷 Imagens Mobile
 
+<br>
+
+<h3 align="center">
+ ✔ Aplicação web na versão mobile <br/>
+</h3>
+
+<br/>
+
 <div align="center"> 
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/195925726-ebf72e59-54d5-4803-b40d-b42bca92cefe.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/195925718-96e720ca-f38c-4281-94c7-6ba8d3b9f664.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/195925715-f411a5fb-814a-4e67-b5c3-cf8f84499ad5.png'></img>
-  <img width='180px' src='https://user-images.githubusercontent.com/60453269/195925727-2825756d-d7e7-4304-b4f1-f8a93484df25.png'></img>  
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557150-1c05ec35-39af-4814-8d25-a11f8a619f7f.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557175-74e5f3a5-f78b-4248-84a5-f9538b13adb6.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557173-adb68f26-2f84-48c4-99c0-3264cd2788c6.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557168-11e2967f-3a8f-43ff-bb51-0230af341924.png'></img>  
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557166-68eb1870-af96-47ed-9d1f-462d753bf572.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557161-64bf00d2-0eef-4d33-a7f7-30952860c5f5.png'></img>
+  <img width='180px' src='https://user-images.githubusercontent.com/60453269/197557157-0e9b1e5b-65ea-47ba-b1e9-723d6e198d90.png'></img>  
 </div> 
 
 ## 📷 Imagens PC
 
+<br>
+
+<h3 align="center">
+ ✔ Aplicação web na versão Desktop <br/>
+</h3>
+
+<br/>
+
 <div align="center"> 
-  <img width='500px' src='https://user-images.githubusercontent.com/60453269/195926439-60fc4a92-a470-4029-95dd-e7fd82ed2607.png'></img>
-  <img width='500px' src='https://user-images.githubusercontent.com/60453269/195926434-ff4a6ecf-3124-47c7-8e5a-2403dea3dc4c.png'></img>
-  <img width='500px' src='https://user-images.githubusercontent.com/60453269/195926431-27b59f7a-4e2c-463e-b0e1-3590a8934679.png'></img>
+  <img width='500px' src='https://user-images.githubusercontent.com/60453269/197558623-b84b2201-6c92-434d-9ddc-9e2677be1e45.png'></img>
   <img width='500px' src='https://user-images.githubusercontent.com/60453269/195926427-27de046a-9fbd-41f4-afb0-b1e0771de011.png'></img>
+  <img width='500px' src='https://user-images.githubusercontent.com/60453269/197558637-3b197c9c-956a-415f-b56d-895a53c775cf.png'></img>
+  <img width='500px' src='https://user-images.githubusercontent.com/60453269/197558633-687d0861-f0e3-49a9-8865-45fc3472974a.png'></img>
+  <img width='500px' src='https://user-images.githubusercontent.com/60453269/197559593-ee7f5dfa-375f-4f5d-a9e1-8b31a34ce56b.png'></img>
   <img width='500px' src='https://user-images.githubusercontent.com/60453269/195926441-76d95bf4-3238-4dc2-b9b9-0fa7ed143d8c.png'></img>  
 </div> 
 
@@ -33,8 +56,14 @@ https://user-images.githubusercontent.com/60453269/195930225-ee2b8a0b-cbf4-4bd4-
 - React Js
 - Styled Components 
 - Axios 
+- React Hooks
+- React Router Dom
+- UseEffect  
+- UseState
+- UseContext
 
 ## 🖥️ Libs para instalar e visualizar o projeto 
+
 - Router➜ npm i react-router-dom
 - Axios ➜ npm i axios
 - Styled Components ➜ npm i styled-components 
