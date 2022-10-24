@@ -1,1 +1,1 @@
-export const BASE_URL = "https://api-shopper-production.up.railway.app/shopper";
+export const BASE_URL = "http://localhost:3003/shopper";
