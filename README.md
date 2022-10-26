@@ -2,6 +2,16 @@
 <img src="https://user-images.githubusercontent.com/60453269/197553620-fdb2ef65-9b3a-4d4d-af41-9ca3d1b856f8.png">
 </h1>
 
+<br/>
+
+## `Documentação no Posteman` ➥ [Link](https://documenter.getpostman.com/view/22767800/2s8YCdGuUL#c05a557e-5382-4b06-824f-e4749a76878f)
+
+<br/>
+
+## `Projeto Back-end` ➥ [Link GitHub](https://github.com/MayconCoutinho/Api-Shopper)
+
+<br/>
+
 <h3 align="center">
   🔊 Ative o Som Para Ter Uma Experiência Mais Agradável 😁  <br/>
 </h3>
